@@ -1,0 +1,191 @@
+/*Base styles*/ 
+@import url('https://fonts.googleapis.com/css2?family=Munika&display=swap');
+
+
+:root {
+    --text-color: #1a1c20;
+    --link-color: #872020;
+    --background-color: #f6f6f6;
+    font-size: 17px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+header {
+    text-align: center;
+    background-color: #f6f6f6;
+
+}
+
+header h1 {
+    font-size: 3.5rem;
+
+}
+
+header h1 a {
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 1100;
+    color: var(--text-color);
+    display: inline-block; /* Ensures it behaves like an inline element inside the centered text */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+nav {
+    background-color: #bfd6c4;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3.125rem;
+    height: 5rem;
+    align-items: center;
+    top: 5rem;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f6f6f6;
+    border-top: 2px solid #1a1c20;
+    border-bottom: 2px solid #1a1c20;
+}
+
+nav .left a {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav .left a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+section {
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section:nth-of-type(odd) {
+    background-color: #f8f8f8; /* Light gray for odd sections */
+}
+
+section:nth-of-type(even) {
+    background-color: #ffffff; /* White for even sections */
+}
+
+/* Section Heading Styles */
+section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #872020;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+
+/* About Section */
+#about-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#about-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#about-section .headshot{
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 37px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-section .headshot img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#about-section .headshot img:hover {
+    transform: scale(1.2);
+}
+
+#about-section .bio {
+    max-width: 60rem;
+    margin-bottom: 1rem;
+    padding: 0 2 rem;
+}
+
+#about-section .bio p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#about-section .social-media {
+    font-size: 3rem;
+}
+
+#about-section .social-media a {
+    padding: 1rem;
+    margin: 0 0.75 rem;
+}
+
+#about-section .social-media a i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+#about-section .social-media a:hover i {
+    transform: scale(1.2);
+    color: var(--link-color);
+}
+
+#about-section .social-media i {
+    color: #872020;
+    font-weight: 500;
+}
