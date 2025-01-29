@@ -1,5 +1,6 @@
 /*Base styles*/ 
-@import url('https://fonts.googleapis.com/css2?family=Munika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 
 
 :root {
@@ -7,6 +8,7 @@
     --link-color: #872020;
     --background-color: #f6f6f6;
     font-size: 17px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 * {
@@ -240,7 +242,6 @@ h3 {
     color: #f6e7e4;
 }
 
-/* When project-slide is hovered, make the content visible */
 .project-slide:hover .project-content {
     height: 100%;  
 }
@@ -252,3 +253,72 @@ h3 {
 /* Skills */
 
 /* Contact */
+#contact-section form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-section input,
+#contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Adds spacing below each input */
+}
+
+
+#contact-section .btn {
+    background-color: var(--text-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-section .btn:hover {
+    background-color: var(--link-color);
+}
+
+
+
+/* Footer */ 
+footer {
+    background-color: #1a1c20;
+    color: #f6e7e4;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+footer .social-media {
+    font-size: 2rem;
+    padding-top: 0.6rem;
+
+}
+
+footer .social-media a {
+    padding: 0.5rem;
+    margin: 0 0.75 rem;
+}
+
+footer .social-media a i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-media a:hover i {
+    transform: scale(1.2);
+    color: var(--link-color);
+}
+
+footer .social-media i {
+    color: #872020;
+    font-weight: 500;
+}
